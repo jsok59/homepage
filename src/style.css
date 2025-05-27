@@ -93,6 +93,7 @@ section {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .about-me::after {
@@ -119,7 +120,7 @@ section {
 }
 
 .about-me .img-container {
-	flex: 1;
+	flex: 1 1 250px;
 	background-image: url(../images/about-me_3353.jpg);
 	background-position: center;
 	background-size: cover;
@@ -148,7 +149,7 @@ section {
 }
 
 .about-me .content-container {
-	flex: 1.3;
+	flex: 1.3 1 250px;
 	gap: 20px;
 	background-color: #ffff;
 	padding: 40px;
@@ -213,8 +214,18 @@ section {
 	padding: 20px;
 }
 
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
 .card .img-container {
 	overflow: hidden;
+	flex: 1.5;
+}
+
+.card .content-container {
+	flex: 1;
 }
 
 .card .img-container img:hover {
@@ -223,4 +234,21 @@ section {
 
 .card .img-container img {
 	transition: transform 0.4s ease;
+}
+
+/* MY CONTACT */
+
+.my-contact {
+	background-color: maroon;
+	color: white;
+}
+
+.my-contact .icons {
+	justify-content: start;
+}
+
+.my-contact .content-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
